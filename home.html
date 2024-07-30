@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | DESIGN-ated</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One" />
+    <link href='https://fonts.googleapis.com/css?family=Jockey One' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <link rel="stylesheet" type="text/css" href="pagetransition.css">
+    
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0%;
+            font-family: "Jockey One";
+            background-color: beige;
+        }
+        
+        .header {
+            border: 0px;
+        }
+        
+        /*Banner Start*/
+        #banner {
+            margin: 115px auto;
+            height: 250px;
+            width: 100%;
+            background-image: linear-gradient(#4f6367,#7a9e9f);
+        }
+        
+        .cloud{ 
+            width:100%;
+            height: 120px;
+            background:#ECEFF1;
+            box-shadow: 10px 10px rgba(0,0,0,0.2);
+            border-radius: 40px;
+            top: 160px;
+            position: relative;
+            z-index: 1;
+        }
+        .cloud::after, .cloud::before{
+            content:"";
+            position: absolute;
+            background: inherit;
+            border-radius: 80px;
+        }
+        .cloud::after{
+            width: 100px;
+            height: 100px;
+            top: -80px;
+            left: calc(50% - 50px);
+        }
+        .cloud::before{
+            height: 140px;
+            width: 300px;
+            top: -50px;
+            left: calc(50% - 150px);
+        }
+        /*Banner Ending*/
+        
+        #trendingtitle {
+            width: 33%;
+            font-size: 200%; 
+            text-transform: uppercase;
+            margin-left: 20px;
+            background-color: #bbaaad;
+            border-radius: 20px 0px 0px 20px;
+            text-indent: 10px;
+            position: absolute;
+            height: 45px;
+        }
+        
+        #trendingtitle::after {
+            z-index: -1;
+            content:"";
+            position: absolute;
+            background: inherit;
+            width: 30px;
+            height: 30px;
+            transform: rotateZ(45deg);
+            top: 7px;
+            left: calc(100% - 15px);
+        }
+        
+        #List {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 20px;
+        }
+        
+        #List li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+            border-radius: 15px;
+        }
+        
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .producttype {
+            background-color: white;
+            width: 100px;
+            border: 0px solid black;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        
+        .content {
+            width: 60%;
+            background-color: #b8d8d8;
+            opacity: 95%;
+            margin: 200px 20px;
+            border-radius: 10px;
+        }
+        
+        @keyframes goUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0%;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body onload="getaccount()">
+    <div id="headerplace"></div>
+    
+    <div id="banner">
+        <br>
+        <div>
+            
+            <div style="margin: 10px auto; z-index: 1; position: absolute; display: flex; justify-content: space-between; width: 100%;">
+                <div style="width: 30%; margin-left: 20px; text-align: center; color: #b8d8d8;  margin-top: 50px;">INFO ABOUT THE WEBSITE:<br>DESIGN-ated is an e-commerce website primarily used for you to buy different clothing and designs that you want.</div>
+                <div style="width: 30%; margin-right: 20px; text-align: center; color: #b8d8d8; margin-top: 50px;">CONTACT INFORMATION:<br>#57392350<br>#28395732</div>
+            </div>
+            <div style="margin: 40px auto; display: flex; justify-content: space-between; width: 100%; position: absolute; z-index: 1;">
+                <div></div>
+                <div style="font-size: 60px; display: flex; justify-content: space-between; flex-direction: column; z-index: -1;">
+                    <img src="logo.png" style="margin: -120px auto; width: 23%; height: 120%; z-index: -1;">
+                </div>
+                <div></div>
+            </div>
+            
+            <div class="cloud"><div style="margin-left: calc(50% - 230px); z-index: 2; position: absolute; font-size: 100px; color: #8b6469;">DESIGN-ated</div></div>
+        </div>
+    </div>
+    
+    
+    <div id="trendingtitle">What's trending now?</div>
+    <div class="content">
+        
+        <ul id="List">
+            <li>
+                <a href="#">Gucci | Trending Brand #1</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="gucci.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">GUCCI</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productgucci1.html'">Sweater</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productgucci2.html'">Eyewears</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productgucci3.html'">Slides</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Burberry | Trending Brand #2</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="burberry.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">Burberry</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productburberry1.html'">Trousers</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productburberry2.html'">Bags</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productburberry3.html'">Sneakers</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Prada | Trending Brand #3</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="prada.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">Prada</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productprada1.html'">Bags</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productprada2.html'">Eyewears</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productprada3.html'">Shoes</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Chanel | Trending Brand #4</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="chanel.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">Chanel</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productchanel1.html'">Bags</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productchanel2.html'">Jackets</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productchanel3.html'">Pre-owned</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Balenciaga | Trending Brand #5</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="balenciaga.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">Balenciaga</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productbalenciaga1.html'">Speed Trainers</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productbalenciaga2.html'">T-Shirts</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productbalenciaga3.html'">Slides</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Dior | Trending Brand #6</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="dior.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 75px; font-size: 50px; text-transform: uppercase;">Dior</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productdior1.html'">Bags</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productdior2.html'">Shoes</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productdior3.html'">Tops</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Louis Vuitton | Trending Brand #7</a>
+                <div style="display: flex; justify-content: space-evenly; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <div style="width: 100px;"><img src="louisvuitton.png" style="display: inline;"></div>
+                        <div style="width: 50px; margin-top: 40px; font-size: 50px; text-transform: uppercase;">Louis Vuitton</div>
+                        <div></div>
+                    </div>
+                    <hr style="border: 1px solid black; width: 90%;">
+                    <div style="display: flex; justify-content: space-around;">
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productlouisvuitton1.html'">Handbags</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productlouisvuitton2.html'">Coats</button>
+                        <button class="producttype" onclick="window.location.href = 'productfolders/productlouisvuitton3.html'">Flats</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <img src="cart.png" style="position: fixed; display: flex; justify-content: space-around; width: 400px; height: 650px; top: 15%; left: 70%; z-index: 0; opacity: 50%;" onclick="window.location.href = 'cart.html';">
+    <div id="motto" style="margin-top: -200px; z-index: 2; position: absolute;">WHERE EVERYTHING IS DESIGNED FOR YOU!</div>
+    
+    <div id="footerplace" style="position: absolute; width: 100%;"></div>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

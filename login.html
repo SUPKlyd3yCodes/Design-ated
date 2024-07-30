@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In | DESIGN-ated</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One" />
+    <link href='https://fonts.googleapis.com/css?family=Jockey One' rel='stylesheet'>
+    <link rel="stylesheet" href="structure.css">
+    <link rel="stylesheet" type="text/css" href="pagetransition.css">
+    
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0%;
+            font-family: "Jockey One";
+            background-color: beige;
+        }
+        
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin: 200px auto;
+        }
+        
+        .contentLeft {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            width: 45%;
+            height: 400px;
+            background-color: #4f6367;
+            opacity: 95%;
+            margin: 45px auto;
+            border-radius: 10px;
+        }
+        
+        .contentRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            width: 35%;
+            height: 400px;
+            background-color: #7a9e9f;
+            opacity: 95%;
+            margin: 45px auto;
+            border-radius: 0 0 10px 10px;
+        }
+
+        #trendingtitle {
+            width: 40%;
+            font-size: 200%; 
+            text-transform: uppercase;
+            margin-left: 56%;
+            background-color: #bbaaad;
+            border-radius: 0px 20px 20px 0px;
+            text-indent: 10px;
+            position: absolute;
+            height: 45px;
+        }
+        
+        #trendingtitle::before {
+            z-index: -1;
+            content:"";
+            position: absolute;
+            background: inherit;
+            width: 30px;
+            height: 30px;
+            transform: rotateZ(45deg);
+            top: 7px;
+            left: calc(-5% + 15px);
+        }
+        
+        @keyframes goUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0%;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body onload="getaccount()">
+    <div id="headerplace"></div>
+    
+    <div class="content">
+        <div class="contentLeft">
+            <div style="width: 49%; margin: 0 auto; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="font-size: 60px;" id="name">TITLE</div>
+                <div><img src="accountimage.jpg" alt="Dummy Image" style="width: 150px; height: 150px; border-radius: 100px;"></div>
+                <div>Don't panic, it's organic!</div>
+            </div>
+            <div style="height: 99%; border: 1px black dashed;"></div>
+            <div style="width: 49%; margin: 0 auto; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="font-size: 60px;">Member Log In</div>
+                <form onsubmit="login()">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username"><br>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"><br>
+
+                    <label for="remember">Remember Me?</label>
+                    <input type="checkbox" name="remember" id="remember"><br>
+
+                    <button type="submit">Login</button>
+                    <p id="result"></p>
+                </form>
+            </div>
+        </div>
+        
+    <div id="trendingtitle">Benefits Of Having An Account!</div>
+        <div class="contentRight">
+            <ul>
+                <li>By logging in, you can access and interact more with our website.</li>
+                <li>You can sell and allow you to have your own shop in the website.</li>
+                <li>You will be able to add favorites and basically do more than having a guest account.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="motto">WHERE EVERYTHING IS DESIGNED FOR YOU!</div>
+    
+    <div id="footerplace"></div>
+    
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="account.js"></script>
+    
+    <script>
+    </script>
+</body>
+</html>

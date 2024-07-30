@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create | DESIGN-ated</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One" />
+        <link href='https://fonts.googleapis.com/css?family=Jockey One' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="structure.css">
+        <link rel="stylesheet" type="text/css" href="pagetransition.css">
+        
+        <style>
+            body {
+                overflow-x: hidden;
+                margin: 0%;
+                font-family: "Jockey One";
+                background-color: beige;
+            }
+            
+            img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .content {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                padding: 30px;;
+                height: 600px;
+                background-color: blanchedalmond;
+                opacity: 95%;
+                margin: 140px auto;
+                border-radius: 10px;
+            }
+            
+            
+            #trendingtitle {
+                width: 33%;
+                font-size: 200%; 
+                text-transform: uppercase;
+                margin-left: 20px;
+                background-color: #bbaaad;
+                border-radius: 20px 0px 0px 20px;
+                text-indent: 10px;
+                position: absolute;
+                height: 45px;
+            }
+            
+            #trendingtitle::after {
+                z-index: -1;
+                content:"";
+                position: absolute;
+                background: inherit;
+                width: 30px;
+                height: 30px;
+                transform: rotateZ(45deg);
+                top: 7px;
+                left: calc(100% - 15px);
+            }
+            
+            @keyframes goUp {
+                0% {
+                    transform: translateY(50px);
+                    opacity: 0%;
+                }
+                100% {
+                    transform: translateY(0px);
+                    opacity: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body onload="getaccount()">
+        <div id="headerplace"></div>
+        
+        <div class="content">
+            <div>
+                
+                <div id="trendingtitle">Your Cart</div>
+            </div>
+            <div style="margin-top: 10px;">
+            </div>
+            
+            <div style="display: flex; justify-content: center;">
+                
+            </div>
+        </div>
+        
+        <div id="motto">WHERE EVERYTHING IS DESIGNED FOR YOU!</div>
+        
+        <div id="footerplace"></div>
+        
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+        <script src="account.js"></script>
+        
+        <script>
+            
+        </script>
+    </body>
+    </html>
+</body>
+</html>

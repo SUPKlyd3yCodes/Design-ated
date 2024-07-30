@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create | DESIGN-ated</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One" />
+    <link href='https://fonts.googleapis.com/css?family=Jockey One' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="structure.css">
+    <link rel="stylesheet" type="text/css" href="pagetransition.css">
+    
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0%;
+            font-family: "Jockey One";
+            background-color: beige;
+        }
+        
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .content {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;;
+            height: 600px;
+            background-color: blanchedalmond;
+            opacity: 95%;
+            margin: 140px auto;
+            border-radius: 10px;
+        }
+        
+        @keyframes goUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0%;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body onload="getaccount()">
+    <div id="headerplace"></div>
+    
+    <div class="content">
+        <div>
+            <button style="height: 55px; width: 300px; border-radius: 20px 0px 0px 20px; margin-right: -2px;">MOST POPULAR</button><button style="height: 55px; width: 300px; border-radius: 0px 0px 0px 0px; margin-right: -1px;">LATEST POST</button><button style="height: 55px; width: 300px; border-radius: 0px 20px 20px 0px; margin-left: -2px;">REVIEWS</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <img src="plus.jpg" onclick="window.location.href='creating.html'">
+        </div>
+        
+        <div style="display: flex; justify-content: center;">You have not posted</div>
+    </div>
+    
+    <div id="motto">WHERE EVERYTHING IS DESIGNED FOR YOU!</div>
+
+    <div id="footerplace"></div>
+    
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | DESIGN-ated</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One" />
+    <link href='https://fonts.googleapis.com/css?family=Jockey One' rel='stylesheet'>
+    <link rel="stylesheet" href="structure.css">
+    <link rel="stylesheet" type="text/css" href="pagetransition.css">
+    <link rel="stylesheet" type="text/css" href="product.css">
+    
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0%;
+            font-family: "Jockey One";
+            background-color: beige;
+        }
+        
+        @keyframes goUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0%;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body onload="getaccount()">
+    <div id="headerplace"></div>
+    
+    <div class="content">
+        <div class="contentRight">
+            <form action="#">
+                <div id="contentTop" style="height: 210px;">
+                    <div id="contentTitle">
+                        <div style="font-size: 20px; margin: 0 auto;">NAME: <input type="text" placeholder="Name"></div>
+                        <div id="description">
+                            <div id="leftdesc">
+                                <div id="price"><span>Price: <input type="number" placeholder="Price" min="0"></span> </div>
+                                <div id="shipping">
+                                    <span>Shipping:</span> Qr <input type="number" placeholder="Shipping Price" min="0"> Expedited International Shipping 
+                                </div>
+                                <div id="delivery" style="text-align: left;">
+                                    <span>Delivery: </span> Estimated between <input type="date" placeholder="First Date"> and <input type="date" placeholder="Second Date">
+                                </div>
+                                <div id="returns">
+                                    <span>Returns:</span> <input type="number" placeholder="Shipping Price" min="0"> days returns
+                                </div>
+                            </div>
+                            <div id="rightdesc">
+                                <div id="size">
+                                    <label for="size"><span>Sizes</span></label>
+                                    From: <input type="number" placeholder="size" min="0"> To: <input type="number" placeholder="size" min="0"><br>
+                                    <span>Payment:</span>
+                                    <input type="radio" id="paymentChoice1"
+                                    name="payment" value="Paypal" title="Paypal">
+                                    <label for="paymentChoice1"><img class="paymentimg" src="paypal.png" title="Paypal"></label>
+                                    
+                                    <input type="radio" id="paymentChoice2"
+                                    name="payment" value="Visa" title="Visa">
+                                    <label for="paymentChoice2"><img class="paymentimg" src="visa.png" title="Visa"></label><br>
+                                    
+                                    <input type="radio" id="paymentChoice3"
+                                    name="payment" value="Master Card" title="Master Card">
+                                    <label for="paymentChoice3"><img class="paymentimg" src="master.png" title="Master Card"></label>
+                                    
+                                    <input type="radio" id="paymentChoice4"
+                                    name="payment" value="Debit Card" title="Debit Card">
+                                    <label for="paymentChoice4"><img class="paymentimg" src="debit.jpg" title="Debit Card"></label>
+                                    <br>
+                                    
+                                    <input type="submit" value="Submit" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="contentMiddle">
+                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"><br>
+                    <label for="file" style="cursor: pointer;">Upload Image</label><br>
+                    <img id="output" width="150px" height="150px" alt="Your Image"><br>
+                    <div style="width: 250px; height: 180px; background-color: white; opacity: 90%; padding: 10px; overflow-y: scroll;">
+                        Reviews:
+                    </div>
+                </div>
+                
+                <div id="contentBottom">
+                    <div id="addBuyButtons" style="display: flex; justify-content: space-around;">
+                        <button id="addBuy">ADD TO CART</button>
+                        <button id="addBuy">BUY NOW</button>
+                    </div><br>
+                    <div id="contentBrand">
+                        <img src="http://placehold.jp/ff0000/000000/60x60.png?text=Brand Logo" alt="Dummy Image" style="width: 60px; height: 60px; border-radius: 100%;">
+                        By: You
+                    </div>
+                </div>
+                <button>submit?</button>
+            </form>
+        </div>
+    </div>
+    <div id="motto">WHERE EVERYTHING IS DESIGNED FOR YOU!</div>
+    
+    <div id="footerplace"></div>
+    
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="account.js"></script>
+    
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>
